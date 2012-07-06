@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xml-to-html-1.xslt" ?>
+
+<!DOCTYPE MyProject SYSTEM "myDTD.dtd">
+<!--Validated at: http://validator.w3.org/check -->
+
+<MyProject>
+  <chap>
+    <team wins="36" loses="30" in_division="Запад" playoffs="Класира">Далас Маверикс</team>
+    <history>Отбора на Маверикс е настоящия шампион на НБА.Имат може би най-известния собственик на спортен отбор в САЩ - Марк Кюбан.Известен със своята ексцентричност, той е човекът донесъл първа титла на отбора от неговото създаване през 1980.</history>
+    <achievments>
+      <division_titles>3</division_titles>
+      <conference_titles>2</conference_titles>
+      <league_titles>1</league_titles>
+      <notable_people>Марк Кюбан</notable_people>
+    </achievments>
+
+    <arena seats="19200">Американ Еърлайнс Център</arena>
+
+    <roster>
+      <player position="Плеймейкър">Джейсън Кид</player>
+      <player position="Гард">Родриг Бобуа</player>
+      <player position="Леко-Крило">Шон Мериън</player>
+      <player position="Тежко-Крило">Дирк Новитзки</player>
+      <player position="Център">Брендън Хейуърд</player>
+    </roster>
+
+    <free_agent>
+      <fa_name>Джейсън Кид</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>3</years_w_team>
+    </free_agent>
+
+    <star>
+      <star_name>Дирк Новитзки</star_name>
+      <years_pro>14</years_pro>
+      <salary>17000000</salary>
+      <avg_pts>23</avg_pts>
+    </star>
+
+    <star>
+      <star_name>Джейсън Кид</star_name>
+      <years_pro>18</years_pro>
+      <salary>8800000</salary>
+      <avg_pts>13,2</avg_pts>
+    </star>
+
+    <coach has_title="Да" years_old="52" salary="4000000">Рик Карслайл</coach>
+
+    <add_info>
+      <owner billionaire="Да">Марк Кюбан</owner>
+      <manager>Дони Нелсън</manager>
+      <site>mavs.com</site>
+      <colors>Черно и бяло</colors>
+      <value>497000000</value>
+      <draft_position>26</draft_position>
+      <dleague_affiliate>Форд Флайърс</dleague_affiliate>
+    </add_info>
+
+  </chap>
+
+  <chap>
+    <team wins="23" loses="43" in_division="Изток" playoffs="Отпада" >Торонто Раптърс</team>
+    <history>Раптърс са единствения кандаски тим състезаващ се в НБА.Създаден през 1995 година заедно с отбора на Ванкувър Гризлис(по-късно преместил се в Мемфис) като част от експанзията на асоциацията в посока Канада</history>
+    <achievments>
+      <division_titles>1</division_titles>
+      <conference_titles>0</conference_titles>
+      <league_titles>0</league_titles>
+      <notable_people>
+      </notable_people>
+    </achievments>
+
+    <arena seats="22911 ">Скай Доум</arena>
+
+    <roster>
+      <player position="Плеймейкър">Хосе Калдерон</player>
+      <player position="Гард">Демар Дерожан</player>
+      <player position="Леко-Крило">Джеймс Джонсън</player>
+      <player position="Тежко-Крило">Андреа Барняни</player>
+      <player position="Център">Аарон Грей</player>
+    </roster>
+
+    <free_agent>
+      <fa_name>Джерад Бейлис</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>2</years_w_team>
+    </free_agent>
+
+    <star>
+      <star_name>Андреа Барняни</star_name>
+      <years_pro>6</years_pro>
+      <salary>9000000</salary>
+      <avg_pts>15,1</avg_pts>
+    </star>
+
+    <coach salary="3000000" years_old="46">Дуейн Кейси</coach>
+
+    <add_info>
+      <owner>Maple Leaf Sports and Entertainment</owner>
+      <manager>Брайън Коланджело</manager>
+      <site>raptors.com</site>
+      <colors>Червено и черно</colors>
+      <value>482000000</value>
+      <draft_position>5</draft_position>
+    </add_info>
+
+  </chap>
+</MyProject>

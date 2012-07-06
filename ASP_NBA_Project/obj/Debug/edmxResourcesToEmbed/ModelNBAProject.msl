@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nbaDBModelStoreContainer" CdmEntityContainer="nbaDBEntities">
+    <EntitySetMapping Name="Achievments">
+      <EntityTypeMapping TypeName="nbaDBModel.Achievment">
+        <MappingFragment StoreEntitySet="Achievments">
+          <ScalarProperty Name="AchievmentID" ColumnName="AchievmentID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="division_titles" ColumnName="division_titles" />
+          <ScalarProperty Name="conference_titles" ColumnName="conference_titles" />
+          <ScalarProperty Name="league_titles" ColumnName="league_titles" />
+          <ScalarProperty Name="notable_people" ColumnName="notable_people" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Add_Info">
+      <EntityTypeMapping TypeName="nbaDBModel.Add_Info">
+        <MappingFragment StoreEntitySet="Add_Info">
+          <ScalarProperty Name="Add_InfoID" ColumnName="Add_InfoID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="site" ColumnName="site" />
+          <ScalarProperty Name="colors" ColumnName="colors" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="draft_position" ColumnName="draft_position" />
+          <ScalarProperty Name="dleague_affiliate" ColumnName="dleague_affiliate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arenas">
+      <EntityTypeMapping TypeName="nbaDBModel.Arena">
+        <MappingFragment StoreEntitySet="Arenas">
+          <ScalarProperty Name="ArenaID" ColumnName="ArenaID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="seats" ColumnName="seats" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Coaches">
+      <EntityTypeMapping TypeName="nbaDBModel.Coach">
+        <MappingFragment StoreEntitySet="Coaches">
+          <ScalarProperty Name="CoachID" ColumnName="CoachID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="has_title" ColumnName="has_title" />
+          <ScalarProperty Name="years_old" ColumnName="years_old" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Free_Agents">
+      <EntityTypeMapping TypeName="nbaDBModel.Free_Agents">
+        <MappingFragment StoreEntitySet="Free_Agents">
+          <ScalarProperty Name="Free_AgentID" ColumnName="Free_AgentID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="match" ColumnName="match" />
+          <ScalarProperty Name="years_w_team" ColumnName="years_w_team" />
+          <ScalarProperty Name="qual_offer" ColumnName="qual_offer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="nbaDBModel.Player">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stars">
+      <EntityTypeMapping TypeName="nbaDBModel.Star">
+        <MappingFragment StoreEntitySet="Stars">
+          <ScalarProperty Name="StarID" ColumnName="StarID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="years_pro" ColumnName="years_pro" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="avg_pts" ColumnName="avg_pts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="nbaDBModel.Team">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="wins" ColumnName="wins" />
+          <ScalarProperty Name="loses" ColumnName="loses" />
+          <ScalarProperty Name="playoffs" ColumnName="playoffs" />
+          <ScalarProperty Name="in_division" ColumnName="in_division" />
+          <ScalarProperty Name="history" ColumnName="history" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

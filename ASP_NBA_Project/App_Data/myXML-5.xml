@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xml-to-html-1.xslt" ?>
+
+<!DOCTYPE MyProject SYSTEM "myDTD.dtd">
+<!--Validated at: http://validator.w3.org/check -->
+<MyProject>
+  <chap>
+    <team wins="25" loses="41" in_division="Изток" playoffs="Отпада">Детройт Пистонс</team>
+    <history>Клубът първоначално е основан в Мичиган през 1941, но през 1948 се присъединява към НБА ситуирайки се в автомобилния град  Детройт.Въперки, че е относително малък франчайз, клубът се налага като един от силните отбори в НБА </history>
+    <achievments>
+      <division_titles>4</division_titles>
+      <conference_titles>7</conference_titles>
+      <league_titles>3</league_titles>
+      <notable_people>
+      </notable_people>
+    </achievments>
+
+    <arena seats="21454">Дъ Палас</arena>
+
+    <roster>
+      <player position="Плеймейкър">Родни Стъки</player>
+      <player position="Гард">Брендън Найт</player>
+      <player position="Леко-Крило">Грег Монро</player>
+      <player position="Тежко-Крило">Тайшон Принс</player>
+      <player position="Център">Бен Уолъс</player>
+    </roster>
+
+    <free_agent>
+      <fa_name>Бен Уолъс</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>8</years_w_team>
+    </free_agent>
+
+    <star>
+      <star_name>Бен Уолъс</star_name>
+      <years_pro>16</years_pro>
+      <salary>2000000</salary>
+      <avg_pts>7,2</avg_pts>
+    </star>
+
+    <coach salary="2000000" years_old="49">Джо Къстър</coach>
+
+    <add_info>
+      <owner billionaire="Да">Том Гор</owner>
+      <manager>Джо Дюмарс</manager>
+      <site>pistons.com</site>
+      <colors>Бяло и сньо</colors>
+      <value>332000000</value>
+      <draft_position>8</draft_position>
+      <dleague_affiliate>Мед Антс</dleague_affiliate>
+    </add_info>
+
+  </chap>
+
+  <chap>
+    <team wins="36" loses="30" in_division="Запад" playoffs="Отпада">Юта Джаз</team>
+    <history>Франчайзът е основан през 1947 и е ситуиран в Ню Орлиънс.През 1979 се мести в Юта.Това не им носи късмет, тъй като в продължение на следващите 10 години не достигат плейофите.Обратно на тази  традиция в началото, на по-късен етап, отборът почти не пропуска плейофи (1984-2004) под ръководството на легендарния Джери Слоан, който е начело на отбора рекордните 23 години.  </history>
+    <achievments>
+      <division_titles>8</division_titles>
+      <conference_titles>2</conference_titles>
+      <league_titles>0</league_titles>
+      <notable_people>
+      </notable_people>
+    </achievments>
+
+    <arena seats="19911">Енерджи Солюшънс Арина</arena>
+
+    <roster>
+      <player position="Плеймейкър">Девин Харис</player>
+      <player position="Гард">Гордън Хейуърд</player>
+      <player position="Леко-Крило">Джош Хауърд</player>
+      <player position="Тежко-Крило">Пол Милсап</player>
+      <player position="Център">Ал Джеферсън</player>
+    </roster>
+
+    <free_agent>
+      <fa_name>Морис Алмонд</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>2</years_w_team>
+    </free_agent>
+
+    <star>
+      <star_name>Ал Джеферсън</star_name>
+      <years_pro>8</years_pro>
+      <salary>14000000</salary>
+      <avg_pts>15,9</avg_pts>
+    </star>
+
+    <coach salary="3000000" years_old="55">Тайлър Корбин</coach>
+
+    <add_info>
+      <owner>Гейл Милър</owner>
+      <manager>Кевин О`Конър</manager>
+      <site>utahjazz.com</site>
+      <colors>Морско-снньо и жълто</colors>
+      <value>335000000</value>
+      <draft_position>3</draft_position>
+      <dleague_affiliate>Стампдейт</dleague_affiliate>
+    </add_info>
+
+  </chap>
+</MyProject>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xml-to-html-1.xslt" ?>
+
+<!DOCTYPE MyProject SYSTEM "myDTD.dtd">
+<!--Validated at: http://validator.w3.org/check -->
+
+<MyProject>
+  <chap>
+    <team wins="41" loses="25" in_division="Запад" playoffs="Класира">Лос Анджелис Лейкърс</team>
+    <history>Лейкърс са един от двата НБА тима които играят в Лос Анджелис.Заедно с отбора на Бостън Селктикс оформят най-голямото съперничество в асоцияцията през годините, още повечте, че двата отбора са и най-успешните в историята.Отборът е основан през 1947 под името Минеаполис Лейкърс, но преместен 13 години по-късно в Града на ангелите. </history>
+    <achievments>
+      <division_titles>22</division_titles>
+      <conference_titles>31</conference_titles>
+      <league_titles>17</league_titles>
+      <notable_people>Фил Джаксън</notable_people>
+    </achievments>
+
+    <arena seats="18997">Стейпълс Център</arena>
+
+    <roster>
+      <player position="Плеймейкър">Дерек Фишър</player>
+      <player position="Гард">Кобе Брайънт</player>
+      <player position="Леко-Крило">Рон Артеср</player>
+      <player position="Тежко-Крило">Поу Гасол</player>
+      <player position="Център">Андрю Байнъм</player>
+    </roster>
+
+    <free_agent>
+      <fa_name>Мат Барнс</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>2</years_w_team>
+    </free_agent>
+
+    <free_agent>
+      <fa_name>Трой Мърфи</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>1</years_w_team>
+    </free_agent>
+
+    <star>
+      <star_name>Кобе Брайънт</star_name>
+      <years_pro>16</years_pro>
+      <salary>23000000</salary>
+      <avg_pts>25,4</avg_pts>
+    </star>
+
+    <star>
+      <star_name>Поу Гасол</star_name>
+      <years_pro>11</years_pro>
+      <salary>18700000</salary>
+      <avg_pts>17,9</avg_pts>
+    </star>
+
+    <coach salary="4500000" years_old="52">Майк Браун</coach>
+
+    <add_info>
+      <owner billionaire="Да">Джери Бъс</owner>
+      <manager>Митч Къпчак</manager>
+      <site>lakers.com</site>
+      <colors>Златно-жълто и лилаво</colors>
+      <value>900000000</value>
+      <draft_position>27</draft_position>
+      <dleague_affiliate>Форт Флайърс</dleague_affiliate>
+    </add_info>
+
+  </chap>
+
+  <chap>
+    <team wins="36" loses="30" in_division="Изток" playoffs="Класира" >Ню-Йорк Никс</team>
+    <history>Създаден през 1946 отботра на Никс е един от създателите на БАА по-късно трансформирана в НБА.Отборът играе мачовете си в Медисън Скуеър Гардън, считана от мнозина за меката на баскетбола.</history>
+    <achievments>
+      <division_titles>4</division_titles>
+      <conference_titles>8</conference_titles>
+      <league_titles>2</league_titles>
+      <notable_people>
+      </notable_people>
+    </achievments>
+
+    <arena seats="19763">Медисън Скуеър Гардън</arena>
+
+    <roster>
+      <player position="Плеймейкър">Ландри Фийлс</player>
+      <player position="Гард">Иън Шъмпърт</player>
+      <player position="Леко-Крило">Кармело Антъни</player>
+      <player position="Тежко-Крило">Амаре Сртудамеиър</player>
+      <player position="Център">Тайсън Чандлър</player>
+    </roster>
+
+    <free_agent>
+      <fa_name>Майк Биби</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>1</years_w_team>
+    </free_agent>
+
+    <star>
+      <star_name>Кармело Антъни</star_name>
+      <years_pro>9</years_pro>
+      <salary>18500000</salary>
+      <avg_pts>24,8</avg_pts>
+    </star>
+
+    <star>
+      <star_name>Амаре Сртудамеиър</star_name>
+      <years_pro>10</years_pro>
+      <salary>18200000</salary>
+      <avg_pts>21,9</avg_pts>
+    </star>
+
+    <coach salary="6000000" years_old="55">Майк Д`Антъни</coach>
+
+    <add_info>
+      <owner billionaire="Да">Джеймс Долън</owner>
+      <owner>Madison Square Garden, Inc.</owner>
+      <manager>Глен Грънуалд</manager>
+      <site>knicks.com</site>
+      <colors>Бяло, оранжево и синьо</colors>
+      <value>780000000</value>
+      <draft_position>17</draft_position>
+      <dleague_affiliate>Пейтриътс</dleague_affiliate>
+    </add_info>
+
+  </chap>
+</MyProject>

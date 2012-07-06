@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!ELEMENT MyProject (chap+)>
+<!ELEMENT chap (team,history,achievments,arena,roster,free_agent*,star+,coach,add_info)>
+
+<!ELEMENT team (#PCDATA)>
+<!ATTLIST team wins CDATA  #REQUIRED>
+<!-- CDATA = The value is character data -->
+<!ATTLIST team loses CDATA #REQUIRED>
+<!ATTLIST team playoffs  (Класира|Отпада)   #IMPLIED>
+<!ATTLIST team in_division (Запад|Изток)   #REQUIRED>
+<!ELEMENT history (#PCDATA)>
+
+<!ELEMENT achievments (division_titles*,conference_titles*,league_titles*,notable_people*)>
+<!-- Inline Group 1. "achievments" element can contain zero or more occurrences of parsed character data -->
+<!ELEMENT division_titles (#PCDATA)>
+<!ELEMENT conference_titles (#PCDATA)>
+<!ELEMENT league_titles (#PCDATA)>
+<!ELEMENT notable_people (#PCDATA)>
+
+
+<!ELEMENT arena (#PCDATA)>
+<!ATTLIST arena seats CDATA  #REQUIRED>
+
+<!ELEMENT roster (player+)>
+<!ELEMENT player (#PCDATA)>
+<!ATTLIST player position (Плеймейкър|Гард|Леко-Крило|Тежко-Крило|Център)  #REQUIRED>
+
+<!ELEMENT free_agent (fa_name,qual_offer,years_w_team)>
+<!-- Inline Group 2-->
+<!ELEMENT fa_name (#PCDATA)>
+<!ELEMENT qual_offer (#PCDATA)>
+<!ATTLIST qual_offer matched (Да|Не) "Не" >
+<!ELEMENT years_w_team (#PCDATA)>
+
+<!ELEMENT star (star_name,years_pro,salary,avg_pts)>
+<!-- Inline Group 3-->
+<!ELEMENT star_name (#PCDATA)>
+<!ELEMENT years_pro (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT avg_pts (#PCDATA)>
+
+<!ELEMENT coach (#PCDATA)>
+<!ATTLIST coach salary CDATA #IMPLIED>
+<!ATTLIST coach has_title (Да|Не) "Не" >
+<!ATTLIST coach years_old CDATA #IMPLIED>
+
+<!ELEMENT add_info (owner+,manager,site,colors,value,draft_position,dleague_affiliate*)>
+<!-- Inline Group 4-->
+<!ELEMENT owner (#PCDATA)>
+<!ATTLIST owner billionaire (Да|Не) "Не" >
+<!ELEMENT manager (#PCDATA)>
+<!ELEMENT site (#PCDATA)>
+<!ELEMENT colors (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT draft_position (#PCDATA)>
+<!ELEMENT dleague_affiliate (#PCDATA) >

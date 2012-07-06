@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_NBA_Project", "ASP_NBA_Project\ASP_NBA_Project.csproj", "{B72B055B-2871-4873-8310-D090CBEC302B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B72B055B-2871-4873-8310-D090CBEC302B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72B055B-2871-4873-8310-D090CBEC302B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72B055B-2871-4873-8310-D090CBEC302B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72B055B-2871-4873-8310-D090CBEC302B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

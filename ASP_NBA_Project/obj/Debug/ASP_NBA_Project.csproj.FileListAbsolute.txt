@@ -1,0 +1,5 @@
+D:\Projects\ASP\ASP_NBA_Project\ASP_NBA_Project\bin\ASP_NBA_Project.dll
+D:\Projects\ASP\ASP_NBA_Project\ASP_NBA_Project\bin\ASP_NBA_Project.pdb
+D:\Projects\ASP\ASP_NBA_Project\ASP_NBA_Project\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\ASP\ASP_NBA_Project\ASP_NBA_Project\obj\Debug\ASP_NBA_Project.dll
+D:\Projects\ASP\ASP_NBA_Project\ASP_NBA_Project\obj\Debug\ASP_NBA_Project.pdb

@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="nbaDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="nbaDBModelStoreContainer">
+          <EntitySet Name="Achievments" EntityType="nbaDBModel.Store.Achievments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Add_Info" EntityType="nbaDBModel.Store.Add_Info" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Arenas" EntityType="nbaDBModel.Store.Arenas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Coaches" EntityType="nbaDBModel.Store.Coaches" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Free_Agents" EntityType="nbaDBModel.Store.Free_Agents" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Players" EntityType="nbaDBModel.Store.Players" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Stars" EntityType="nbaDBModel.Store.Stars" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Teams" EntityType="nbaDBModel.Store.Teams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Achievments_Teams" Association="nbaDBModel.Store.FK_Achievments_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Achievments" EntitySet="Achievments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Add_Info_Teams" Association="nbaDBModel.Store.FK_Add_Info_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Add_Info" EntitySet="Add_Info" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Arenas_Teams" Association="nbaDBModel.Store.FK_Arenas_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Arenas" EntitySet="Arenas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Coaches_Teams" Association="nbaDBModel.Store.FK_Coaches_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Coaches" EntitySet="Coaches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Free_Agents_Teams" Association="nbaDBModel.Store.FK_Free_Agents_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Free_Agents" EntitySet="Free_Agents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Players_Teams" Association="nbaDBModel.Store.FK_Players_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Players" EntitySet="Players" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Stars_Teams" Association="nbaDBModel.Store.FK_Stars_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Stars" EntitySet="Stars" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Achievments">
+          <Key>
+            <PropertyRef Name="AchievmentID" />
+          </Key>
+          <Property Name="AchievmentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="int" Nullable="false" />
+          <Property Name="division_titles" Type="int" />
+          <Property Name="conference_titles" Type="int" />
+          <Property Name="league_titles" Type="int" />
+          <Property Name="notable_people" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Add_Info">
+          <Key>
+            <PropertyRef Name="Add_InfoID" />
+          </Key>
+          <Property Name="Add_InfoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="int" Nullable="false" />
+          <Property Name="owner" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="manager" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="site" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="colors" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="value" Type="float" Nullable="false" />
+          <Property Name="draft_position" Type="int" Nullable="false" />
+          <Property Name="dleague_affiliate" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Arenas">
+          <Key>
+            <PropertyRef Name="ArenaID" />
+          </Key>
+          <Property Name="ArenaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="seats" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Coaches">
+          <Key>
+            <PropertyRef Name="CoachID" />
+          </Key>
+          <Property Name="CoachID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="salary" Type="float" />
+          <Property Name="has_title" Type="nvarchar" MaxLength="50" />
+          <Property Name="years_old" Type="int" />
+        </EntityType>
+        <EntityType Name="Free_Agents">
+          <Key>
+            <PropertyRef Name="Free_AgentID" />
+          </Key>
+          <Property Name="Free_AgentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="match" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="years_w_team" Type="int" Nullable="false" />
+          <Property Name="qual_offer" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Players">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Name="PlayerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="position" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Stars">
+          <Key>
+            <PropertyRef Name="StarID" />
+          </Key>
+          <Property Name="StarID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="years_pro" Type="int" Nullable="false" />
+          <Property Name="salary" Type="float" Nullable="false" />
+          <Property Name="avg_pts" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Teams">
+          <Key>
+            <PropertyRef Name="teamID" />
+          </Key>
+          <Property Name="teamID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="wins" Type="int" Nullable="false" />
+          <Property Name="loses" Type="int" Nullable="false" />
+          <Property Name="playoffs" Type="nvarchar" MaxLength="50" />
+          <Property Name="in_division" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="history" Type="nvarchar" Nullable="false" MaxLength="2000" />
+        </EntityType>
+        <Association Name="FK_Achievments_Teams">
+          <End Role="Teams" Type="nbaDBModel.Store.Teams" Multiplicity="1" />
+          <End Role="Achievments" Type="nbaDBModel.Store.Achievments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Achievments">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Add_Info_Teams">
+          <End Role="Teams" Type="nbaDBModel.Store.Teams" Multiplicity="1" />
+          <End Role="Add_Info" Type="nbaDBModel.Store.Add_Info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Add_Info">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Arenas_Teams">
+          <End Role="Teams" Type="nbaDBModel.Store.Teams" Multiplicity="1" />
+          <End Role="Arenas" Type="nbaDBModel.Store.Arenas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Arenas">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Coaches_Teams">
+          <End Role="Teams" Type="nbaDBModel.Store.Teams" Multiplicity="1" />
+          <End Role="Coaches" Type="nbaDBModel.Store.Coaches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Coaches">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Free_Agents_Teams">
+          <End Role="Teams" Type="nbaDBModel.Store.Teams" Multiplicity="1" />
+          <End Role="Free_Agents" Type="nbaDBModel.Store.Free_Agents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Free_Agents">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Players_Teams">
+          <End Role="Teams" Type="nbaDBModel.Store.Teams" Multiplicity="1" />
+          <End Role="Players" Type="nbaDBModel.Store.Players" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Players">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Stars_Teams">
+          <End Role="Teams" Type="nbaDBModel.Store.Teams" Multiplicity="1" />
+          <End Role="Stars" Type="nbaDBModel.Store.Stars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Stars">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="nbaDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="nbaDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Achievments" EntityType="nbaDBModel.Achievment" />
+          <EntitySet Name="Add_Info" EntityType="nbaDBModel.Add_Info" />
+          <EntitySet Name="Arenas" EntityType="nbaDBModel.Arena" />
+          <EntitySet Name="Coaches" EntityType="nbaDBModel.Coach" />
+          <EntitySet Name="Free_Agents" EntityType="nbaDBModel.Free_Agents" />
+          <EntitySet Name="Players" EntityType="nbaDBModel.Player" />
+          <EntitySet Name="Stars" EntityType="nbaDBModel.Star" />
+          <EntitySet Name="Teams" EntityType="nbaDBModel.Team" />
+          <AssociationSet Name="FK_Achievments_Teams" Association="nbaDBModel.FK_Achievments_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Achievments" EntitySet="Achievments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Add_Info_Teams" Association="nbaDBModel.FK_Add_Info_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Add_Info" EntitySet="Add_Info" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Arenas_Teams" Association="nbaDBModel.FK_Arenas_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Arenas" EntitySet="Arenas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Coaches_Teams" Association="nbaDBModel.FK_Coaches_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Coaches" EntitySet="Coaches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Free_Agents_Teams" Association="nbaDBModel.FK_Free_Agents_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Free_Agents" EntitySet="Free_Agents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Players_Teams" Association="nbaDBModel.FK_Players_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Players" EntitySet="Players" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Stars_Teams" Association="nbaDBModel.FK_Stars_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Stars" EntitySet="Stars" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Achievment">
+          <Key>
+            <PropertyRef Name="AchievmentID" />
+          </Key>
+          <Property Name="AchievmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="Int32" Nullable="false" />
+          <Property Name="division_titles" Type="Int32" />
+          <Property Name="conference_titles" Type="Int32" />
+          <Property Name="league_titles" Type="Int32" />
+          <Property Name="notable_people" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Team" Relationship="nbaDBModel.FK_Achievments_Teams" FromRole="Achievments" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Add_Info">
+          <Key>
+            <PropertyRef Name="Add_InfoID" />
+          </Key>
+          <Property Name="Add_InfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="Int32" Nullable="false" />
+          <Property Name="owner" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="manager" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="site" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="colors" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="value" Type="Double" Nullable="false" />
+          <Property Name="draft_position" Type="Int32" Nullable="false" />
+          <Property Name="dleague_affiliate" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Team" Relationship="nbaDBModel.FK_Add_Info_Teams" FromRole="Add_Info" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Arena">
+          <Key>
+            <PropertyRef Name="ArenaID" />
+          </Key>
+          <Property Name="ArenaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="seats" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Team" Relationship="nbaDBModel.FK_Arenas_Teams" FromRole="Arenas" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Coach">
+          <Key>
+            <PropertyRef Name="CoachID" />
+          </Key>
+          <Property Name="CoachID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="salary" Type="Double" />
+          <Property Name="has_title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="years_old" Type="Int32" />
+          <NavigationProperty Name="Team" Relationship="nbaDBModel.FK_Coaches_Teams" FromRole="Coaches" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Free_Agents">
+          <Key>
+            <PropertyRef Name="Free_AgentID" />
+          </Key>
+          <Property Name="Free_AgentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="match" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="years_w_team" Type="Int32" Nullable="false" />
+          <Property Name="qual_offer" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Team" Relationship="nbaDBModel.FK_Free_Agents_Teams" FromRole="Free_Agents" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Name="PlayerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="position" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Team" Relationship="nbaDBModel.FK_Players_Teams" FromRole="Players" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Star">
+          <Key>
+            <PropertyRef Name="StarID" />
+          </Key>
+          <Property Name="StarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="years_pro" Type="Int32" Nullable="false" />
+          <Property Name="salary" Type="Double" Nullable="false" />
+          <Property Name="avg_pts" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Team" Relationship="nbaDBModel.FK_Stars_Teams" FromRole="Stars" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="teamID" />
+          </Key>
+          <Property Name="teamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="wins" Type="Int32" Nullable="false" />
+          <Property Name="loses" Type="Int32" Nullable="false" />
+          <Property Name="playoffs" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="in_division" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="history" Type="String" Nullable="false" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Achievments" Relationship="nbaDBModel.FK_Achievments_Teams" FromRole="Teams" ToRole="Achievments" />
+          <NavigationProperty Name="Add_Info" Relationship="nbaDBModel.FK_Add_Info_Teams" FromRole="Teams" ToRole="Add_Info" />
+          <NavigationProperty Name="Arenas" Relationship="nbaDBModel.FK_Arenas_Teams" FromRole="Teams" ToRole="Arenas" />
+          <NavigationProperty Name="Coaches" Relationship="nbaDBModel.FK_Coaches_Teams" FromRole="Teams" ToRole="Coaches" />
+          <NavigationProperty Name="Free_Agents" Relationship="nbaDBModel.FK_Free_Agents_Teams" FromRole="Teams" ToRole="Free_Agents" />
+          <NavigationProperty Name="Players" Relationship="nbaDBModel.FK_Players_Teams" FromRole="Teams" ToRole="Players" />
+          <NavigationProperty Name="Stars" Relationship="nbaDBModel.FK_Stars_Teams" FromRole="Teams" ToRole="Stars" />
+        </EntityType>
+        <Association Name="FK_Achievments_Teams">
+          <End Role="Teams" Type="nbaDBModel.Team" Multiplicity="1" />
+          <End Role="Achievments" Type="nbaDBModel.Achievment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Achievments">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Add_Info_Teams">
+          <End Role="Teams" Type="nbaDBModel.Team" Multiplicity="1" />
+          <End Role="Add_Info" Type="nbaDBModel.Add_Info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Add_Info">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Arenas_Teams">
+          <End Role="Teams" Type="nbaDBModel.Team" Multiplicity="1" />
+          <End Role="Arenas" Type="nbaDBModel.Arena" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Arenas">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Coaches_Teams">
+          <End Role="Teams" Type="nbaDBModel.Team" Multiplicity="1" />
+          <End Role="Coaches" Type="nbaDBModel.Coach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Coaches">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Free_Agents_Teams">
+          <End Role="Teams" Type="nbaDBModel.Team" Multiplicity="1" />
+          <End Role="Free_Agents" Type="nbaDBModel.Free_Agents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Free_Agents">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Players_Teams">
+          <End Role="Teams" Type="nbaDBModel.Team" Multiplicity="1" />
+          <End Role="Players" Type="nbaDBModel.Player" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Players">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Stars_Teams">
+          <End Role="Teams" Type="nbaDBModel.Team" Multiplicity="1" />
+          <End Role="Stars" Type="nbaDBModel.Star" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="teamID" />
+            </Principal>
+            <Dependent Role="Stars">
+              <PropertyRef Name="teamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="nbaDBModelStoreContainer" CdmEntityContainer="nbaDBEntities">
+          <EntitySetMapping Name="Achievments"><EntityTypeMapping TypeName="nbaDBModel.Achievment"><MappingFragment StoreEntitySet="Achievments">
+            <ScalarProperty Name="AchievmentID" ColumnName="AchievmentID" />
+            <ScalarProperty Name="teamID" ColumnName="teamID" />
+            <ScalarProperty Name="division_titles" ColumnName="division_titles" />
+            <ScalarProperty Name="conference_titles" ColumnName="conference_titles" />
+            <ScalarProperty Name="league_titles" ColumnName="league_titles" />
+            <ScalarProperty Name="notable_people" ColumnName="notable_people" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Add_Info"><EntityTypeMapping TypeName="nbaDBModel.Add_Info"><MappingFragment StoreEntitySet="Add_Info">
+            <ScalarProperty Name="Add_InfoID" ColumnName="Add_InfoID" />
+            <ScalarProperty Name="teamID" ColumnName="teamID" />
+            <ScalarProperty Name="owner" ColumnName="owner" />
+            <ScalarProperty Name="manager" ColumnName="manager" />
+            <ScalarProperty Name="site" ColumnName="site" />
+            <ScalarProperty Name="colors" ColumnName="colors" />
+            <ScalarProperty Name="value" ColumnName="value" />
+            <ScalarProperty Name="draft_position" ColumnName="draft_position" />
+            <ScalarProperty Name="dleague_affiliate" ColumnName="dleague_affiliate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Arenas"><EntityTypeMapping TypeName="nbaDBModel.Arena"><MappingFragment StoreEntitySet="Arenas">
+            <ScalarProperty Name="ArenaID" ColumnName="ArenaID" />
+            <ScalarProperty Name="teamID" ColumnName="teamID" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="seats" ColumnName="seats" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Coaches"><EntityTypeMapping TypeName="nbaDBModel.Coach"><MappingFragment StoreEntitySet="Coaches">
+            <ScalarProperty Name="CoachID" ColumnName="CoachID" />
+            <ScalarProperty Name="teamID" ColumnName="teamID" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="salary" ColumnName="salary" />
+            <ScalarProperty Name="has_title" ColumnName="has_title" />
+            <ScalarProperty Name="years_old" ColumnName="years_old" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Free_Agents"><EntityTypeMapping TypeName="nbaDBModel.Free_Agents"><MappingFragment StoreEntitySet="Free_Agents">
+            <ScalarProperty Name="Free_AgentID" ColumnName="Free_AgentID" />
+            <ScalarProperty Name="teamID" ColumnName="teamID" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="match" ColumnName="match" />
+            <ScalarProperty Name="years_w_team" ColumnName="years_w_team" />
+            <ScalarProperty Name="qual_offer" ColumnName="qual_offer" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Players"><EntityTypeMapping TypeName="nbaDBModel.Player"><MappingFragment StoreEntitySet="Players">
+            <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+            <ScalarProperty Name="teamID" ColumnName="teamID" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="position" ColumnName="position" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Stars"><EntityTypeMapping TypeName="nbaDBModel.Star"><MappingFragment StoreEntitySet="Stars">
+            <ScalarProperty Name="StarID" ColumnName="StarID" />
+            <ScalarProperty Name="teamID" ColumnName="teamID" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="years_pro" ColumnName="years_pro" />
+            <ScalarProperty Name="salary" ColumnName="salary" />
+            <ScalarProperty Name="avg_pts" ColumnName="avg_pts" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Teams"><EntityTypeMapping TypeName="nbaDBModel.Team"><MappingFragment StoreEntitySet="Teams">
+            <ScalarProperty Name="teamID" ColumnName="teamID" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="wins" ColumnName="wins" />
+            <ScalarProperty Name="loses" ColumnName="loses" />
+            <ScalarProperty Name="playoffs" ColumnName="playoffs" />
+            <ScalarProperty Name="in_division" ColumnName="in_division" />
+            <ScalarProperty Name="history" ColumnName="history" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModelNBAProject">
+        <EntityTypeShape EntityType="nbaDBModel.Achievment" Width="1.5" PointX="3" PointY="1.75" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="nbaDBModel.Add_Info" Width="1.5" PointX="3" PointY="4.625" Height="2.5783902994791656" IsExpanded="true" />
+        <EntityTypeShape EntityType="nbaDBModel.Arena" Width="1.5" PointX="3" PointY="7.875" Height="1.7566536458333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="nbaDBModel.Coach" Width="1.5" PointX="3" PointY="10.5" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="nbaDBModel.Free_Agents" Width="1.5" PointX="3" PointY="13.25" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="nbaDBModel.Player" Width="1.5" PointX="3" PointY="16.125" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="nbaDBModel.Star" Width="1.5" PointX="3" PointY="18.625" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="nbaDBModel.Team" Width="1.5" PointX="0.75" PointY="9.625" Height="3.2357796223958317" IsExpanded="true" />
+        <AssociationConnector Association="nbaDBModel.FK_Achievments_Teams" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="9.625" />
+          <ConnectorPoint PointX="1.5" PointY="2.7926741536458337" />
+          <ConnectorPoint PointX="3" PointY="2.7926741536458337" />
+        </AssociationConnector>
+        <AssociationConnector Association="nbaDBModel.FK_Add_Info_Teams" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="9.625" />
+          <ConnectorPoint PointX="1.9062525" PointY="5.9141951497395828" />
+          <ConnectorPoint PointX="3" PointY="5.9141951497395828" />
+        </AssociationConnector>
+        <AssociationConnector Association="nbaDBModel.FK_Arenas_Teams" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.0937475" PointY="9.625" />
+          <ConnectorPoint PointX="1.0937475" PointY="8.7187475" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="8.7187475" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="8.7187475" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="8.7187475" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="8.7187475" />
+          <ConnectorPoint PointX="3" PointY="8.7187475" />
+        </AssociationConnector>
+        <AssociationConnector Association="nbaDBModel.FK_Coaches_Teams" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.542674153645834" />
+          <ConnectorPoint PointX="3" PointY="11.542674153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="nbaDBModel.FK_Free_Agents_Teams" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="12.860779622395832" />
+          <ConnectorPoint PointX="1.5" PointY="14.292674153645834" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="14.292674153645834" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="14.292674153645834" />
+          <ConnectorPoint PointX="3" PointY="14.292674153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="nbaDBModel.FK_Players_Teams" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="12.860779622395832" />
+          <ConnectorPoint PointX="1.9062525" PointY="17.003326822916666" />
+          <ConnectorPoint PointX="3" PointY="17.003326822916666" />
+        </AssociationConnector>
+        <AssociationConnector Association="nbaDBModel.FK_Stars_Teams" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.0937475" PointY="12.860779622395832" />
+          <ConnectorPoint PointX="1.0937475" PointY="19.667674153645834" />
+          <ConnectorPoint PointX="3" PointY="19.667674153645834" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

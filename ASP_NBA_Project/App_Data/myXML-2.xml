@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xml-to-html-1.xslt" ?>
+
+<!DOCTYPE MyProject SYSTEM "myDTD.dtd">
+<!--Validated at: http://validator.w3.org/check -->
+
+<MyProject>
+  <chap>
+    <team wins="37" loses="29" in_division="Изток" playoffs="Класира">Орландо Меджик</team>
+    <history>Основан и новопросъединен през 1989 година франчайз.Единствения спортен тим от голямата четворка на американските спортове, който играе в Орландо</history>
+    <achievments>
+      <division_titles>5</division_titles>
+      <conference_titles>2</conference_titles>
+      <league_titles>1</league_titles>
+      <notable_people>
+      </notable_people>
+    </achievments>
+
+    <arena seats="18846">Амуей Център</arena>
+
+    <roster>
+      <player position="Плеймейкър">Джамир Нелсън</player>
+      <player position="Гард">Джей Джей Редик</player>
+      <player position="Леко-Крило">Джейсън Ричардсън</player>
+      <player position="Тежко-Крило">Глен Дейвис</player>
+      <player position="Център">Дуайт Хауърд</player>
+    </roster>
+
+    <free_agent>
+      <fa_name>Раян Андерсън</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>4</years_w_team>
+    </free_agent>
+
+    <star>
+      <star_name>Дуайт Хауърд</star_name>
+      <years_pro>8</years_pro>
+      <salary>13000000</salary>
+      <avg_pts>18,2</avg_pts>
+    </star>
+
+    <coach salary="4000000" years_old="47">Стен Ван Гънди</coach>
+
+    <add_info>
+      <owner>RDV Sports, Inc.</owner>
+      <manager>Отис Смит</manager>
+      <site>orlandomagic.com</site>
+      <colors>Синьо на черни райета</colors>
+      <value>385000000</value>
+      <draft_position>23</draft_position>
+      <dleague_affiliate>Флорида Флейм</dleague_affiliate>
+    </add_info>
+
+  </chap>
+
+  <chap>
+    <team wins="39" loses="27" in_division="Изток" playoffs="Класира" >Бостън Селтикс</team>
+    <history>Селтикс са най-успешния НБА отбор за всички времена.Броя на техните титли (17) не е надминат от никой отбор.Техен е и рекорда за най-много последователни титли-8 (1959–1966) </history>
+    <achievments>
+      <division_titles>20</division_titles>
+      <conference_titles>21</conference_titles>
+      <league_titles>17</league_titles>
+      <notable_people>
+      </notable_people>
+    </achievments>
+
+    <arena seats="18624">ТиДи Гардън</arena>
+
+    <roster>
+      <player position="Плеймейкър">Ражон Рондо</player>
+      <player position="Гард">Рей Алън</player>
+      <player position="Леко-Крило">Пол Пиърс</player>
+      <player position="Тежко-Крило">Кевин Гарнет</player>
+      <player position="Център">Джърмейн О`Нийл</player>
+    </roster>
+
+    <free_agent>
+      <fa_name>Рей Алън</fa_name>
+      <qual_offer>1000000</qual_offer>
+      <years_w_team>4</years_w_team>
+    </free_agent>
+
+    <star>
+      <star_name>Ражон Рондо</star_name>
+      <years_pro>9</years_pro>
+      <salary>10000000</salary>
+      <avg_pts>10,7</avg_pts>
+    </star>
+    <star>
+      <star_name>Рей Алън</star_name>
+      <years_pro>16</years_pro>
+      <salary>10000000</salary>
+      <avg_pts>20,2</avg_pts>
+    </star>
+    <star>
+      <star_name>Пол Пиърс</star_name>
+      <years_pro>9</years_pro>
+      <salary>15300000</salary>
+      <avg_pts>22,2</avg_pts>
+    </star>
+    <star>
+      <star_name>Кевин Гарнет</star_name>
+      <years_pro>9</years_pro>
+      <salary>21200000</salary>
+      <avg_pts>19,6</avg_pts>
+    </star>
+
+    <coach salary="7000000" years_old="58">Док Ривърс</coach>
+
+    <add_info>
+      <owner>Boston Basketball Partners L.L.C.</owner>
+      <manager>Дани Ейндж</manager>
+      <site>celtics.com</site>
+      <colors>Бяло и зелено</colors>
+      <value>482000000</value>
+      <draft_position>24</draft_position>
+      <dleague_affiliate>Юта Флаш</dleague_affiliate>
+    </add_info>
+
+  </chap>
+</MyProject>

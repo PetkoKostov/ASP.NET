@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE chap SYSTEM "D:\Projects\ASP\ASP_NBA_Project\ASP_NBA_Project\App_Data\myDTD.dtd">
+<chap>
+  <team wins="25" loses="41" playoffs="Отпада" in_division="Изток">Детройт Пистонс</team>
+  <history>Клубът първоначално е основан в Мичиган през 1941, но през 1948 се присъединява към НБА ситуирайки се в автомобилния град  Детройт.Въперки, че е относително малък франчайз, клубът се налага като един от силните отбори в НБА.</history>
+  <achievments>
+    <division_titles>4</division_titles>
+    <conference_titles>7</conference_titles>
+    <league_titles>3</league_titles>
+    <notable_people>
+    </notable_people>
+  </achievments>
+  <arena seats="21454">Дъ Палас</arena>
+  <roster>
+    <player position="Плеймейкър">Родни Стъки</player>
+    <player position="Гард">Брендън Найт</player>
+    <player position="Леко-Крило">Грег Монро</player>
+    <player position="Тежко-Крило">Тайшон Принс</player>
+    <player position="Център">Бен Уолъс</player>
+  </roster>
+  <free_agent>
+    <fa_name>Бен Уолъс</fa_name>
+    <qual_offer matched="Не">1000000</qual_offer>
+    <years_w_team>8</years_w_team>
+  </free_agent>
+  <star>
+    <star_name>Бен Уолъс</star_name>
+    <years_pro>16</years_pro>
+    <salary>2000000</salary>
+    <avg_pts>7,2</avg_pts>
+  </star>
+  <coach has_title="Да" salary="2000000" years_old="50">Джо Къстър</coach>
+  <add_info>
+    <owner billionaire="Не">Том Гор</owner>
+    <manager>Джо Дюмарс</manager>
+    <site>pistons.com</site>
+    <colors>Бяло и сньо</colors>
+    <value>332000000</value>
+    <draft_position>8</draft_position>
+    <dleague_affiliate>Мед Антс</dleague_affiliate>
+  </add_info>
+</chap>
